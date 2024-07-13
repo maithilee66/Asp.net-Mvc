@@ -1,0 +1,105 @@
+﻿
+<h2>Index</h2>
+
+
+<h1>Learning Razor syntax</h1>
+<h2>1. Inline code</h2>
+<h2> Todays Date is @DateTime.Now</h2>
+
+
+<h2>----------------------------------------------------------------------------</h2>
+<h2>2. Multiline  code</h2>
+
+@{
+    string d = "hello this is index page";
+    int num = 928;
+
+
+}
+
+<h2>d= @d</h2>
+<h2>num= @num</h2>
+
+
+<h2>----------------------------------------------------------------------------</h2>
+<h2>3. for  loop</h2>
+
+@{
+    for (int index = 0; index < 5; index++)
+    {
+        <h1>i=@index</h1>
+    }
+
+    int i = 65;
+}
+
+
+<h2>----------------------------------------------------------------------------</h2>
+<h2>4.Accesibilty</h2>
+
+
+
+<h1>this i was declared in above code block =@i</h1>
+<h2>----------------------------------------------------------------------------</h2>
+<h2>5. for each  loop</h2>
+
+@{
+    string[] fruitsarray = { "apple", "banana", "mango" };
+
+
+
+
+
+    foreach (var fruit in fruitsarray)
+    {
+        <h1>@fruit</h1>
+    }
+}
+
+
+<h2>----------------------------------------------------------------------------</h2>
+<h2>6. if and switch</h2>
+
+@{
+    int val = 2;
+
+    if (val == 0 || val == 1)
+    {
+        <h1>the value is zero or one</h1>
+    }
+    else if (val == 2)
+    {
+        <h1>the value is two</h1>
+    }
+
+
+
+    switch (val)
+    {
+        case 1:
+            <h1>one</h1>
+            break;
+        case 2:
+            <h1>two</h1>
+            break;
+        default:
+            <h1>default code block</h1>
+            break;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            }
+
