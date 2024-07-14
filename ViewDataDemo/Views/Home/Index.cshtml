@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+@using ViewDataDemo.Models
+<h2>-----------------------------------------------------------------</h2>
+
+<h2>1. Accessing view data which has value of string type</h2>
+<h2> @ViewData["message1"] </h2>
+<h2> @ViewData["message2"] </h2>
+
+
+
+<h2>-----------------------------------------------------------------</h2>
+
+<h2>2.  Accessing view data which has value of INT type</h2>
+<h3>@ViewData["NUMBER1"]</h3>
+<h3>@ViewData["NUMBER2"]</h3>
+
+
+<h2>-----------------------------------------------------------------</h2>
+
+<h2>2.  Accessing view data which has value of array type</h2>
+<h2>in array  we need to do typecasting</h2>
+@{
+    foreach (var f in (string[])ViewData["f_array"])
+    {
+        <h2>@f</h2>
+    }
+
+}
+
+
+<h2>-----------------------------------------------------------------</h2>
+
+<h2>2.  Accessing view data which has value of List type</h2>
+<h2>in list  we need to do typecasting</h2>
+@{
+    foreach (var i in (List<string>)ViewData["fruits_list"])
+    {
+        <h2>@i</h2>
+    }
+}
+
+
+<h2>-----------------------------------------------------------------</h2>
+
+<h2>2.  Accessing view data which has value of object type</h2>
+<h2>in object  we need to do typecasting</h2>
+
+@{
+    Employee emp = (Employee)ViewData["emp_variable"];
+    <h2>@emp.Emp_id</h2>
+    <h2>@emp.Emp_name</h2>
+    <h2>//as above we have added using ViewDataDemo.Models we can do here (Employee)ViewData["emp_variable"];</h2>
+    <h2>// if it was not added then we need to do (ViewDataDemo.Models.Employee)ViewData["emp_variable"];</h2>
+
+
+}
