@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "index page hain ye";
+}
+
+<h1>This is index page</h1>
+
+@using (Html.BeginForm("display","Home",FormMethod.Post))
+{
+    <label> Name :</label>
+    <input type="text" name="n" />
+    @Html.ValidationMessage("n")
+    //here validation messgae attribute (i.e "n") should match with name of input tag
+
+        <label> Email :</label>
+    <input type="text" name="e" />
+    @Html.ValidationMessage("e")
+    
+
+    <label> Field :</label>
+    <input type="text" name="f" />
+    @Html.ValidationMessage("f")
+
+    //now after clicking on submit the post request will goto display action method there we need to handle this validstion messgae
+    <input type="submit" value="login" />
+
+}
