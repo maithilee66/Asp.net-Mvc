@@ -16,12 +16,12 @@
     </p>
     <p>
         @Html.LabelFor(model => model.age) &nbsp; @Html.TextBoxFor(model => model.age)
-        @Html.ValidationMessageFor(model => model.age,"",new {@class="text-danger"})
+        @Html.ValidationMessageFor(model => model.age,"*",new {@class="text-danger"})
     </p>
 
     <p>
         @Html.LabelFor(model => model.tax) &nbsp; @Html.TextBoxFor(model => model.tax)
-        @Html.ValidationMessageFor(model => model.tax, "tax kitna hain", new { @class = "text-danger" })
+        @Html.ValidationMessageFor(model => model.tax, "*", new { @class = "text-danger" })
     </p>
 
     <input type="submit" value="submit" class="btn btn-info"/>
