@@ -7,10 +7,10 @@ namespace iassess.Models
 {
     public class Employee
     {
-        [Required (ErrorMessage="id likh")]
+        [Required (ErrorMessage="id field is needed")]
         public int? id { get; set; }
 
-        [Required(ErrorMessage = "name likh")]
+        [Required(ErrorMessage = "name field is needed")]
         public string name { get; set; }
 
         [Required]
